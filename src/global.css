@@ -1,0 +1,615 @@
+/* prettier-ignore */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: 'Uni Sans Demo', sans-serif;
+}
+    /* sidebar */
+    .sidebar-icon {
+        @apply  flex items-center justify-center my-2 mx-auto w-12 h-12 bg-gray-400 dark:bg-gray-800 text-green-500 hover:bg-green-600 hover:text-white rounded-full shadow-lg hover:rounded-2xl transition-all duration-200 ease-linear cursor-pointer;
+    }
+
+    .sidebar-tooltip {
+        @apply absolute w-16 p-2 m-2 min-w-max left-14 rounded-md shadow-md text-white bg-gray-900 text-xs font-bold transition-all duration-100 scale-0 origin-left;
+    }
+
+    .sidebar-hr {
+        @apply mx-2 bg-gray-200 dark:bg-gray-800 rounded-full border border-gray-200 dark:border-gray-800;
+    }
+
+    /* channel bar */
+    .channel-bar {
+        @apply m-0 ml-16 flex-none bg-gray-200 dark:bg-gray-800 overflow-auto h-screen pt-16 w-1/5;
+    }
+
+    .channel-container {
+        @apply flex flex-col justify-start  p-1 m-0;
+    }
+
+    .channel-block {
+        @apply h-16 p-0 m-0 flex items-center justify-center;
+    }
+
+    .channel-block-text {
+        @apply text-lg font-bold tracking-wider text-gray-600 dark:text-gray-400 ml-4 mr-auto;
+    }
+
+    .dropdown {
+        @apply m-0 w-full px-2 pb-2 transition duration-300 ease-in-out;
+    }
+
+    .dropdown-header {
+        @apply text-gray-500 flex items-center cursor-pointer;
+    }
+
+    .dropdown-header-text {
+        @apply text-gray-500;
+    }
+
+    .dropdown-header-text-selected {
+        @apply text-blue-500;
+    }
+
+    .dropdown-header-text,
+    .dropdown-header-text-selected {
+        @apply text-lg text-opacity-90 font-semibold;
+    }
+    .plus_icon{
+        @apply my-auto ml-auto
+    }
+  
+
+    .dropdown-selection {
+        @apply flex ml-2 mt-1 gap-1 items-center transition duration-300 ease-in-out;
+    }
+
+    .dropdown-selection-text {
+        @apply text-gray-500 font-semibold hover:text-pink-500 dark:hover:text-gray-600 cursor-pointer transition duration-300 ease-in-out;
+    }
+
+    /* top navigation */
+    .top-navigation,
+    .top-nav-left,
+    .top-nav-right {
+        @apply flex items-center justify-between;
+    }
+
+    .top-navigation {
+        @apply w-full fixed top-0 h-16 shadow-lg bg-gray-300 dark:bg-gray-700 bg-opacity-90;
+    }
+
+    .top-navigation-icon {
+        @apply text-gray-500 ml-4 mr-3 hover:text-pink-400 cursor-pointer transition duration-300 ease-in-out;
+    }
+
+    .top-navigation-icon:first {
+        @apply ml-auto mr-4;
+    }
+
+    .title-hashtag {
+        @apply text-lg text-gray-500 ml-4 my-auto;
+    }
+
+    .title-text {
+        @apply text-gray-500 text-xl font-semibold tracking-wider text-opacity-80 ml-2;
+    }
+
+    .search {
+        @apply w-3/5 mr-auto flex items-center bg-gray-400 dark:bg-gray-600 text-gray-500 h-9 rounded-md shadow-md;
+    }
+
+    .search-input {
+        @apply w-full font-sans font-semibold bg-transparent outline-none text-gray-500 placeholder-gray-500 p-3 rounded;
+    }
+
+    .search-icon {
+        @apply mr-3;
+    }
+
+    /* content container */
+    .post:last-child {
+        @apply mb-20;
+    }
+
+
+.text_center{
+    @apply !text-center
+}
+.font-20{
+    @apply text-[20px]
+}
+.mt-20{
+    @apply mt-[20px]
+}
+.mb-10{
+    @apply mb-[10px]
+}
+.mt-10{
+    @apply mt-[10px]
+}
+.w-30{
+    @apply w-[30px]
+}
+.h-100{
+    @apply  h-[100vh]
+}
+.d-flex{
+    @apply flex
+}
+.h-100vh{
+    @apply h-[100vh]
+}
+.justifly-content-between{
+    @apply justify-between
+}
+.section{
+    @apply w-full
+}
+.main_header {
+    @apply bg-[#404eed] h-[15vh]
+}
+.font-bold{
+    font-weight: 700;
+}
+
+.align_header_items {
+    @apply flex justify-between w-11/12 my-0 mx-auto px-8 items-center
+}
+
+.nav_flex {
+    @apply flex-1 sm:hidden md:hidden lg:hidden
+}
+
+.nav_ul{
+    @apply flex justify-evenly px-28 text-white font-semibold
+}
+
+.hover_underline{
+    @apply hover:underline
+}
+.signup_login_button{
+    @apply bg-white px-4 py-2 rounded-[40px] cursor-pointer text-[14px] hover:text-[#5865f2]
+}
+
+/* Footer */
+
+.footer{
+    @apply bg-[#23272a] p-[80px] text-white pb-[40px]
+}
+
+.footer_top{
+    @apply flex border-b-[1px] border-[#5865f2] pb-[30px] flex-wrap
+}
+.footer_top_first{
+    @apply flex-[0.3] min-w-[200px] mb-[50px]
+}
+.footer_top_last{
+    @apply flex-[0.175] min-w-[120px] mb-[50px]
+}
+.footer_top_last_text{
+    @apply text-[#5865f2] mb-[8px]
+}
+.footer_header{
+    @apply text-[#5865f2] text-[32px] font-extrabold w-6/12 leading-[1]
+}
+.footer_top_first_li{
+    @apply mr-[20px] text-[20px]
+}
+.footer_top_last_li{
+    @apply hover:underline mb-[8px]
+}
+.footer_bottom{
+    @apply py-[30px] flex justify-between
+}
+.footer_bottom_cta{
+    @apply bg-[#5865f2] px-4 py-2 rounded-[40px] cursor-pointer text-[14px] hover:opacity-95
+}
+.home{
+    @apply h-[85vh] bg-[#404eed] 
+}
+.home_hero1{
+    @apply h-full object-cover
+}
+.home_hero2{
+    @apply absolute bottom-0 left-0 w-6/12 ml-[-348px]
+}
+.home_hero3{
+    @apply absolute bottom-0 right-0 w-6/12 hidden md:block
+}
+
+.home_hero{
+    @apply absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-full sm:w-[90%] md:w-[90%] lg:w-[80%] xl:w-[70%] flex flex-col justify-center
+}
+
+.hero_text_h1{
+   @apply md:text-[56px] font-black text-white text-center mb-10 sm:text-[25px] sm:text-left text-[38px] md:text-center
+}
+.hero_p{
+   @apply text-center w-[90%] mx-auto text-white text-[18px] mb-7 sm:text-[16px] sm:text-left md:text-[16px] md:text-center
+}
+
+.hero_cta_wrapper{
+    @apply flex justify-around sm:flex-col md:flex-row
+}
+
+.hero_buttons_div{
+    @apply flex justify-around sm:flex-col md:flex-row
+}
+
+.hero_buttons_mac{
+    @apply bg-white px-4 py-2 md:px-8 md:py-4 text-[15px] md:text-[18px] rounded-[28px] cursor-pointer hover:text-[#5865f2] font-semibold sm:w-fit sm:mb-[10px] md:w-fit md:mb-[10px]
+}
+.hero_buttons_browser{
+    @apply bg-black h-full text-white px-4  py-1 md:px-8 text-[15px] md:text-[18px] rounded-[28px] cursor-pointer  hover:bg-[#36393f] font-semibold sm:w-fit md:w-fit
+}
+
+.hero_buttons2-hover{
+    @apply hover:bg-[#36393f] bg-black text-white
+}
+.section_flex{
+    @apply flex flex-col
+}
+.home_section_left{
+   @apply flex py-28 sm:flex-col md:flex-row
+}
+.home_section_left_top{
+   @apply flex-[0.6]
+}
+.home_section_left_top_img{
+   @apply w-[80%] my-0 mx-auto
+}
+.home_section_left_top_text{
+   @apply text-[#23272a] text-[48px] font-bold p-[15px] pr-[152px] leading-[1.4] sm:text-[28px] sm:p-[15px] md:text-[32px] md:p-[15px] lg:p-[15px]
+}
+.home_section_left_top_text{
+   @apply text-[#23272a] text-[18px] px-[15px] pr-[152px] sm:text-[16px] sm:p-[15px] md:text-[16px] md:p-[15px] lg:p-[15px]
+}
+.home_section_left_bottom{
+   @apply flex-[0.4] text-center md:text-left  mx-auto flex flex-col justify-center
+}
+.home_section2_h2{
+    @apply text-[#23272a] text-[24px] md:text-[48px] font-bold p-[0] md:pl-[152px] leading-[1.4] sm:text-[28px] sm:p-[15px] md:p-[15px] lg:p-[15px]
+}
+.home_section2_p{
+    @apply text-[#23272a] text-[18px] pl-0 p-[5px] mx-auto md:px-[15px] md:pl-[152px] sm:text-[16px] sm:p-[15px] md:text-[16px] md:p-[15px] lg:p-[15px]
+}
+.home_section2{
+    @apply flex py-28 bg-[#f6f6f6] sm:flex-col md:flex-row
+}
+.home_section3{
+    @apply py-28 pb-56 bg-[#f6f6f6] 
+}
+.home_section3_h2{
+    @apply text-[#23272a] text-[24px] md:text-[48px] font-extrabold text-center w-[60%] my-0 mx-auto mb-[15px] sm:text-[28px] sm:text-left sm:w-[90%]  md:text-left md:w-[90%]
+}
+.home_section3_p{
+    @apply text-[#23272a] text-[18px] w-[60%] my-0 mx-auto text-center sm:text-[16px] sm:text-left sm:w-[90%] md:text-[16px] md:text-left md:w-[90%]
+}
+.home_section3_img{
+    @apply w-[90%] my-0 mx-auto
+}
+.home_section3{
+    @apply  w-[100%] my-0 mx-auto  sm:w-[90%] md:w-[90%] lg:w-[80%]
+}
+.home_section4_h2{
+    @apply absolute top-[20px] w-full text-center text-[32px] font-semibold text-[#23272a]
+}
+
+.home_section4_download{
+    @apply bg-[#404eed] text-white mt-5 px-8 py-4 rounded-[28px] cursor-pointer text-[20px] absolute top-[100px] left-[50%] translate-x-[-50%] w-max hover:bg-[#5865f2]
+}
+
+
+
+/* utility class */
+
+.mb-30{
+    @apply mb-[30px]
+}
+
+
+/* Login */
+
+.login-container{
+    @apply bg-[url('https://res.cloudinary.com/dp3qwua4g/image/upload/v1676208648/discord-clone/login_bg_f0r9an.svg')] bg-no-repeat bg-center bg-cover h-[100vh] flex justify-center items-center
+}
+.login-divs-wrapper{
+    @apply flex bg-[#36393f] w-11/12 lg:w-6/12 cursor-default sm:w-[70%]
+    
+}
+.login-left{
+    @apply  lg:flex-[0.6] p-[25px] sm:flex-1 flex-1 lg:flex-1
+}
+.login-left-h2{
+    @apply text-[25px] font-semibold text-white text-center
+}
+.login-left-p{
+    @apply text-center text-[#8e9297] text-[16px] font-normal mb-7
+}
+
+.login-label{
+    @apply text-[#8e9297] uppercase text-[12px] font-bold
+}
+.login-input{
+    @apply w-full outline-0 border-0 pl-[8px] bg-[#202225] text-[#8e9297] h-[38px] text-[16px] rounded-sm
+}
+.login-submit{
+    @apply bg-[#5865f2] text-white w-full py-2 rounded-sm cursor-pointer text-[16px] mt-[20px] mb-[5px] hover:bg-[#404eed]
+}
+.login-forgot-password{
+@apply text-[#00aff4] text-[14px] font-medium mt-[5px]
+}
+.login-need-account{
+    @apply text-[#8e9297] text-[14px] font-normal
+}
+.login-need-account-span{
+    @apply text-[#00aff4] text-[14px] font-medium
+}
+
+.login-qr-container{
+    @apply hidden lg:flex flex-[0.4] flex-col justify-center items-center p-[25px]
+}
+.login-qr-div{
+    @apply w-[175px] h-[175px] bg-[#36393f] flex justify-center items-center rounded-sm
+}
+.login-qr{
+    @apply w-[175px] h-[175px] bg-white flex justify-center items-center rounded-sm
+}
+.spin{
+    @apply animate-spin
+}
+.login-qr-instruction-h1{
+    @apply text-[15px] text-white text-center mb-[8px] mt-[20px]
+}
+.login-qr-instruction-p{
+    @apply text-center text-[#8e9297] text-[16px] font-normal
+}
+
+/* Register */
+
+.register-wrapper{
+    @apply flex flex-col bg-[#36393f] w-5/12 p-[25px] sm:w-[70%] md:w-[70%] lg:w-[60%]
+}
+.register-h2{
+    @apply text-[25px] font-semibold text-white text-center w-full
+}
+
+.agree-tac-message{
+    @apply text-[#8e9297] text-[11px] font-normal
+}
+.agree-tac-span{
+    @apply text-[#00aff4] font-medium
+}
+
+
+
+/* Sidebar */
+.sidebar_container{
+    @apply flex-[0.07] fixed  top-0 left-0 h-screen w-16 flex flex-col bg-gray-900 shadow-lg overflow-y-scroll overflow-x-hidden
+}
+
+.sidebar_icon{
+    @apply  flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto  hover:bg-gray-800 text-green-500 hover:text-white hover:rounded-xl rounded-3xl transition-all duration-300 ease-linear cursor-pointer shadow-lg
+}
+.sidebar_icon_span{
+    @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md text-white bg-gray-900 text-xs font-bold transition-all duration-100 scale-0 origin-left group-hover:scale-100
+}
+.divider{
+    @apply bg-gray-800 border border-gray-800 rounded-full mx-2
+}
+
+
+/* Channels/ */
+.channelbar{
+    @apply w-80 flex-[0.26] fixed  bg-gray-800 overflow-hidden shadow-lg  h-full
+}
+.channel_dropdoen{
+    @apply flex flex-col justify-start p-1 m-0
+}
+.chev_class{
+    @apply text-opacity-80 my-auto mr-1
+}
+.channel_block{
+    @apply flex items-center justify-center h-16 m-0 p-0
+}
+.channel_block_h2{
+    @apply text-lg tracking-wider font-bold  text-gray-400 mr-auto ml-4 my-auto align-middle
+}
+/* Main */
+.main_container{
+    @apply bg-gray-700 shrink  m-0 h-screen w-auto overflow-hidden pt-16 grow
+}
+.main_post_wrapper{
+    @apply flex flex-col items-center h-full w-full mt-0 ml-0 mx-auto px-0 pb-12 overflow-y-scroll
+}
+
+.bottombar{
+    @apply flex flex-row w-11/12 mx-auto items-center justify-between fixed left-8 right-8 bottom-2 rounded-lg shadow-lg bg-gray-600 px-2 h-12
+}
+.bottombar_input{
+    @apply font-semibold w-full bg-transparent outline-none ml-0 mr-auto  text-gray-400 placeholder-gray-500 cursor-text
+}
+/* Post */
+.post{
+    @apply w-full flex flex-row items-center justify-evenly py-4 px-8 m-0 cursor-pointer
+
+}
+
+.post_left{
+    @apply flex flex-col items-center w-12 m-0 ml-auto mb-auto
+}
+.post_right{
+    @apply w-full flex flex-col justify-start ml-auto
+}
+.post_avatar{
+  
+}
+.post_right_p{
+    @apply text-left font-semibold  text-white mr-2 cursor-pointer
+}
+.post_right_small{
+    @apply text-xs text-left font-semibold text-gray-600 ml-2
+}
+.post_right_text{
+    @apply text-lg text-left  text-white mr-auto whitespace-normal
+}
+
+.plus_icon{
+    @apply text-green-500 shadow-lg mx-2
+}
+
+.bg_gray{
+    @apply fixed w-full bg-black opacity-60 h-full
+}
+.create_server_form{
+    @apply fixed bg-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2
+}
+
+.form_div{
+    @apply bg-white shadow-md rounded px-8 pt-6 flex flex-col opacity-100 w-96 pb-1
+}
+.mb_4{
+    @apply  mb-4
+}
+
+.server_form_input{
+    @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none 
+}
+.server_form_label{
+    @apply block text-gray-700 text-sm font-bold mb-2
+}
+.button_div{
+    @apply flex items-center justify-between
+}
+
+.create_server_btn{
+    @apply bg-primary_blue-900 hover:bg-primary_blue-800 font-normal text-white py-2 px-4 rounded focus:outline-none ml-auto
+}
+.form_header{
+    @apply text-center
+}
+.form_header_h1{
+    @apply font-bold text-2xl
+}
+.form_header_p{
+    @apply mb-2 text-gray-500
+}
+.image_label{
+    @apply mx-auto
+}
+.image_input{
+    @apply opacity-0 
+}
+
+.server_icon_preview{
+    @apply w-52 h-auto rounded-full mx-auto
+}
+.create_channel_form_div{
+    @apply fixed bg-white left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2
+}
+.create_channel_form{
+	@apply bg-white p-6 rounded-lg shadow-md
+}
+.create_channel_form_label{
+	@apply block text-gray-700 font-bold mb-2
+}
+.create_channel_form_channelName{
+	@apply border border-gray-300 p-2 w-full
+}
+.flex_item_center{
+    @apply flex items-center
+}
+.create_channel_form_submit_btn{
+	@apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded
+}
+.createChannelWrapper{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.users_wrapper{
+    @apply  h-full overflow-y-scroll w-1/6 bg-gray-800 px-4 pt-16 flex-none
+}
+
+.user{
+    @apply flex gap-1  items-center my-3 hover:bg-gray-700 p-2 rounded-lg cursor-pointer
+}
+.userProfileImage{
+    @apply w-10 rounded-full 
+}
+.userProfileName{
+    @apply text-base font-medium tracking-wider text-orange-500 ml-4 mr-auto
+}
+.create_channel_button{
+    @apply flex gap-1 items-center text-lime-600 cursor-pointer mr-2
+}
+
+.search {
+    @apply w-1/5 flex items-center justify-start 
+    bg-gray-400 dark:bg-gray-600
+    text-gray-500
+    px-2 h-9 ml-0 mr-0 
+    rounded-md shadow-md
+    transition duration-300 ease-in-out;
+  }
+
+  .search-input {
+    @apply w-full font-sans font-semibold
+    bg-transparent outline-none 
+    text-gray-500  placeholder-gray-500
+    pl-1 rounded;
+  }
+
+  .FA-search{
+    @apply  my-auto
+  }
+  .title-text {
+    @apply text-xl text-gray-500 tracking-wider font-semibold text-opacity-80 
+    mr-auto ml-2 my-auto 
+    transition duration-300 ease-in-out;
+  }
+.serverlist_wrapper{
+    @apply bg-gray-800 w-full pl-20 grid grid-cols-1 md:grid-cols-3  lg:grid-cols-4 gap-3
+}
+
+
+
+
+.server-card{
+    @apply w-full max-w-sm mx-auto md:mx-0 md:mr-2  rounded-lg shadow bg-gray-700 border-gray-600 flex flex-col items-center p-10 mt-16 h-80
+}
+
+.server-card-img{
+    @apply w-32 h-32 mb-3 rounded-full shadow-lg
+}
+.server-card-h5{
+    @apply mb-1 text-xl font-medium text-gray-900 dark:text-white
+}
+.server-card-span{
+    @apply text-sm text-gray-500 dark:text-gray-400
+}
+.server-card-details{
+    @apply flex mt-4 space-x-3 md:mt-6
+}
+.server-card-details-add{
+    @apply inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
+}
+.btn{
+    @apply inline-flex items-center px-4 py-2 text-sm
+     font-medium text-center text-white
+      rounded-lg  focus:ring-4 
+      focus:outline-none mx-4
+}
+
+.btn-success{
+    @apply bg-primary_blue-800
+}
+.btn-danger{
+    @apply bg-red-600
+}
+.server-container{
+    @apply flex w-full
+}
